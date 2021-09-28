@@ -1,0 +1,7 @@
+harnessApiVersion: '1.0'
+type: APPLICATION_MANIFEST
+helmChartConfig:
+  basePath: charts
+  chartName: nginx
+  connectorName: s3-charts
+storeType: HelmChartRepo
