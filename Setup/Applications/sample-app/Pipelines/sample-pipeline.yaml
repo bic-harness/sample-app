@@ -18,3 +18,20 @@ pipelineStages:
   - entityType: INFRASTRUCTURE_DEFINITION
     name: InfraDefinition_KUBERNETES
     value: default-infra-def
+- type: ENV_STATE
+  name: rolling-deployment
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 1
+  workflowName: rolling-deployment
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: default-env
+  - entityType: SERVICE
+    name: Service
+    value: nginx-copy
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: default-infra-def
