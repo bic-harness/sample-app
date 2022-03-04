@@ -30,6 +30,5 @@ pipelineStages:
     approvalStateType: USER_GROUP
     sweepingOutputName: ''
   skipCondition:
-    expression: ${env.name} != "Prod"
-    type: CONDITIONAL_SKIP
+    type: DO_NOT_SKIP
   stageName: STAGE 2
